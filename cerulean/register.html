@@ -22,7 +22,7 @@ body, html {
 }
 
 .card-container.card {
-    width: 650px;
+    width: 700px;
     padding: 40px 40px;
 }
 
@@ -59,7 +59,10 @@ body, html {
 
   </head>
   <body>
-      <nav class="navbar navbar-default">
+   <div class="container">
+
+
+ <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -68,7 +71,7 @@ body, html {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">Brand Name</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -95,86 +98,172 @@ body, html {
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Forget Password</a></li>
+
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
- <div class="container">
 
 <div class="card card-container">
-<form class="form-horizontal">
+<form method="post" class="using-password-strength" action="" role="form">
+
   <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Checkbox
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-      <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
-        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Radios</label>
-      <div class="col-lg-10">
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Option one is this
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            Option two can be something else
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Selects</label>
-      <div class="col-lg-10">
-        <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-        <select multiple="" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
+    <legend>Registration Form</legend>
+        <input type="hidden" name="register" value="true">
+
+    <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="firstname" class="control-label">First Name</label>
+                    <input type="text" name="firstname" id="firstname" value="" class="form-control" required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname" class="control-label">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" value="" class="form-control" required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyname" class="control-label">Company Name</label>
+                    <input type="text" name="companyname" id="companyname" value="" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="control-label">Email Address</label>
+                    <input type="email" name="email" id="email" value="" class="form-control">
+                </div>
+
+                <div id="newPassword1" class="form-group has-feedback">
+                    <label for="inputNewPassword1" class="control-label">Password</label>
+                    <input type="password" class="form-control" id="inputNewPassword1" name="password" autocomplete="off">
+                    <span class="form-control-feedback glyphicon glyphicon-password"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address1" class="control-label">Address 1</label>
+                    <input type="text" name="address1" id="address1" value="" class="form-control" required="">
+                </div>
+
+
+
+            </div>
+            <div class="col-md-6">
+
+
+
+              
+
+                <div class="form-group">
+                    <label for="city" class="control-label">City</label>
+                    <input type="text" name="city" id="city" value="" class="form-control" required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="state" class="control-label">State/Region</label>
+                    <input type="text" id="stateinput" value="" class="form-control" style="display: none;">
+                <select name="state" class="form-control" id="stateselect" required="required">
+                <option value="">—</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chandigarh</option>
+                <option>Chattisgarh</option>
+                <option>Dadra and Nagar Haveli</option>
+                <option>Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Lakshadweep</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Orissa</option>
+                <option>Puducherry</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttaranchal</option>
+                <option>Uttar Pradesh</option>
+                <option>West Bengal</option>
+                </select></div>
+
+                <div class="form-group">
+                    <label for="postcode" class="control-label">Zip Code</label>
+                    <input type="text" name="postcode" id="postcode" value="" class="form-control" required="">
+                </div>
+
+                <div class="form-group">
+                    <label for="country" class="control-label">Country</label>
+                    <select id="country" name="country" class="form-control">                                                 
+                      <option value="IN" selected="selected"> India  </option>
+                     </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phonenumber" class="control-label">Phone Number</label>
+                    <input type="tel" name="phonenumber" id="phonenumber" value="" class="form-control" required="">
+                </div>
+
+                                                           
+                                    
+                   <div class="form-group">
+                        <label for="currency" class="control-label">Choose Currency</label>
+                        <select id="currency" name="currency" class="form-control">
+                          <option value="3">EUR</option>
+                          <option value="2">INR</option>
+                          <option value="1" selected="">USD</option>
+                      </select>
+                    </div>
+
+              </div>
+        </div>      
+                   
+    
+
+           <div class="panel panel-danger tospanel">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="fa fa-exclamation-triangle tosicon"></span> &nbsp; Terms of Service</h3>
+                </div>
+                <div class="panel-body">
+                        <div class="col-md-12">
+                            <label class="checkbox">
+                            <input type="checkbox" name="accepttos" class="accepttos">
+                            I have read and agree to the <a href="http://www.domainindia.org/TermsofUse.php" target="_blank">Terms of Service</a>
+                            </label>
+                        </div>
+                </div>
+            </div>
+        
+        <p align="center">
+            <input class="btn btn-large btn-primary" type="submit" value="Register" >
+        </p>
   </fieldset>
-</form>
+    </form>
+
 </div>
 
 
